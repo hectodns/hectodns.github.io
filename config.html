@@ -15,5 +15,18 @@
         <a href="/signals.html">Signals</a> |
         <a href="/design.html">Design</a>
       </nav>
+
+      <h3>The simplest configuration</h3>
+
+      <p>
+        This configuration allows to start a server listening UDP port <code>53</code>
+        that resonds with <code>SERVFAIL</code> on each submitted request.
+      </p>
+      <pre>
+server {
+    listen = ":53"
+    proto  = "dns"
+}
+      </pre>
   </body>
 </html>
