@@ -1,0 +1,16 @@
+.main {
+  width: 60%;
+  margin: auto;
+}
+
+@media only screen and (max-width:1200px) {
+  .main {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  .main {
+    width: 100%;
+  }
+}
