@@ -14,3 +14,18 @@
     width: 100%;
   }
 }
+
+.config {
+  border-top: 2px solid lightgray;
+  background-color: whitesmoke;
+}
+
+.example {
+  line-height: 1em;
+  border-left: 2px solid lightgray;
+}
+
+.example pre {
+  white-space: pre-line;
+  padding: .5em;
+}

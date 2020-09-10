@@ -30,8 +30,39 @@
       <pre>
 server {
     listen = ":53"
-    proto  = "dns"
+    proto  = "udp"
 }
       </pre>
+
+      <h3>Server configuration</h3>
+
+      <div class="config">
+        <p>Syntax: <code><strong>listen</strong> = <i>"address:port"</i></code>
+        <p>Default: <code>&mdash;</code></p>
+      </div>
+      <p>
+        Sets <i>address</i> and <i>port</i> for IP for a on with server will accept requests.
+        An <i>address</i> may also be a hostname, for example:
+      </p>
+      <blockquote class="example">
+        <pre>
+          listen = ":53"
+          listen = "127.0.0.1:53"
+          listen = ":5353"
+          listen = "localhost:5353"
+        </pre>
+      </blockquote>
+
+      <div class="config">
+        <p>Syntax: <code><strong>max_conns</strong> = <i>number</i></code></p>
+        <p>Default: <code>max_conns = 0</code></p>
+      </div>
+      <p>Sets the maximum number of simultaneous connections that can be opened by a single server. By default, there is no limit on maximum connections.</p>
+
+      <div class="config">
+        <p>Syntax: <code><strong>proto</strong> = <i>"udp"</i>|<i>"tcp"</i>|<i>"http"</i></code>
+        <p>Default: <code>&mdash;</code></p>
+      </div>
+      <p>Sets the communication protocol of the server.</p>
   </body>
 </html>
