@@ -38,7 +38,7 @@ server {
 
       <div class="config">
         <p>Syntax: <code><strong>listen</strong> = <i>"address:port"</i></code>
-        <p>Default: <code>&mdash;</code></p>
+        <p>Default: <code>listen = ":53"</code></p>
       </div>
       <p>
         Sets <i>address</i> and <i>port</i> for IP for a on with server will accept requests.
@@ -60,9 +60,30 @@ server {
       <p>Sets the maximum number of simultaneous connections that can be opened by a single server. By default, there is no limit on maximum connections.</p>
 
       <div class="config">
-        <p>Syntax: <code><strong>proto</strong> = <i>"udp"</i>|<i>"tcp"</i>|<i>"http"</i></code>
-        <p>Default: <code>&mdash;</code></p>
+        <p>Syntax: <code><strong>proto</strong> = <i>"udp"</i>|<i>"tcp"</i>|<i>"http"</i></code></p>
+        <p>Default: <code>proto = "udp"</code></p>
       </div>
       <p>Sets the communication protocol of the server.</p>
+      <p>When <i>"http"</i> is set, the DNS queries over HTTP will be used.</p>
+
+      <div class="config">
+        <p>Syntax: <code><strong>resolver</strong> <i>"name"</i> { ... }</code></p>
+        <p>Default: <code>&mdash;</code></p>
+      </div>
+      <p>
+        Sets configuration for a resolver plugin. Resolvers is a sequence of
+        resolution plugins that are sequentially polled in order to retrieve
+        a response on the processing request.
+      </p>
+
+      <div class="config">
+        <p>Sytax: <code><strong>root</strong> = <i>"path"</i></code></p>
+        <p>Default: <code>root = <i>"$cwd"</i></code></p>
+      </div>
+      <p>
+        Sets the root directory for resolvers, when specified server searches
+        the executable in the given path, otherwise a current working directory
+        will be used
+      </p>
   </body>
 </html>
