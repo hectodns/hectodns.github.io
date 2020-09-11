@@ -67,6 +67,12 @@ server {
       <p>When <i>"http"</i> is set, the DNS queries over HTTP will be used.</p>
 
       <div class="config">
+        <p>Syntax: <code><strong>request_timeout</strong> = <i>"duration"</i></code></p>
+        <p>Default: <code>request_timeout = "0s"</code></p>
+      </div>
+      <p>Sets the maximum duration for processing the request. A timeout of zero means to timeout.</p>
+
+      <div class="config">
         <p>Syntax: <code><strong>resolver</strong> <i>"name"</i> { ... }</code></p>
         <p>Default: <code>&mdash;</code></p>
       </div>
