@@ -34,6 +34,24 @@ server {
 }
       </pre>
 
+      <h3>Core configuration</h3>
+      <div class="config">
+        <p>Syntax: <code><strong>server_shutdown_timeout</strong> = <i>"duration"</i></code></p>
+        <p>Default: <code>server_shutdown_timeout = "0s"</code></p>
+      </div>
+      <p>
+        Configures a timeout for a graceful shutdown of server. When the <i>duration</i>
+        expires, hectodns will close connections to facilitate shutdown.
+      </p>
+
+      <div class="config">
+        <p>Syntax: <code><strong>server</strong> { ... }</code></p>
+        <p>Default: <code>&mdash;</code></p>
+      </div>
+      <p>
+        Sets configuration for a server.
+      </p>
+
       <h3>Server configuration</h3>
 
       <div class="config">
@@ -83,11 +101,11 @@ server {
       </p>
 
       <div class="config">
-        <p>Sytax: <code><strong>root</strong> = <i>"path"</i></code></p>
-        <p>Default: <code>root = <i>"$cwd"</i></code></p>
+        <p>Sytax: <code><strong>resolver_directory</strong> = <i>"path"</i></code></p>
+        <p>Default: <code>resolver_director = <i>"$cwd"</i></code></p>
       </div>
       <p>
-        Sets the root directory for resolvers, when specified server searches
+        Sets the working directory for resolvers, when specified server searches
         the executable in the given path, otherwise a current working directory
         will be used
       </p>
