@@ -27,6 +27,28 @@
       </p>
 
       <h3>Features</h3>
+        <ul>
+          <li>
+            <p>
+              Support of multiple listeners within a single process: <i>hectodns</i> can start several
+              servers with independent resolution chain.
+            </p>
+          </li>
+          <li>
+            <p>
+              Process management: <i>hectodns</i> will reap and restart resolvers that die from broken apps.
+              There is no need to manage multiple processes yourself. Server can be configured to spawn any
+              number of resolver processes, independently from the other resolvers in a chain.
+            </p>
+          </li>
+          <li>
+            <p>
+              Does not care if your resolver application is thread-safe, resolvers are run within
+              their own isolated address space and only serve one request at a time for maximum
+              robustness.
+            </p>
+          </li>
+        </ul>
       <h3>Install</h3>
       <p>At this moment installation is available only from the source code:</p>
       <code>go install github.com/hectodns/hectodns</code>
